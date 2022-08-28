@@ -62,7 +62,7 @@ X,y=load_train(df)
 model=compile(X,y)
 X_test=load_test(df).cleanDescription
 y_pred=model.predict(X_test)
-result={"id":load_test(df).id,"Store Section":y_pred}
+result={"id":load_test(df).id,"Store Section":y_pred,"cleanDescription":X_test}
 result=pd.DataFrame(result)
 result.to_csv('Store-result.csv',index=False)
 
